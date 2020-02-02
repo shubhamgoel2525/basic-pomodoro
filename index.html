@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pomodoro Timer</title>
+    <script src="script.js"></script>
+    <script src="progressBar.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="clock">
+            <div id="timer"></div>
+            <div>
+                <input type="text" id="clock-task" placeholder="Add Your Task Here...">
+            </div>
+            <div id="actions">
+                <button id="start">
+                    <i class="fas fa-play" id="play-icon"></i>
+                    <i class="fas fa-pause hidden" id="pause-icon"></i>
+                </button>
+                <button id="reset" class="hidden">
+                    <i class="fas fa-stop"></i>
+                </button>
+            </div>
+            <div id="clock-title">
+                <span>
+                    Changes made here will reflect at the start of the next work / break session
+                </span>
+            </div>
+            <div id="actions">
+                <div class="pomodoro-input">
+                    <label>Work Duration</label>
+                    <input type="number" name="input-work-duration" id="input-work-duration" />
+                </div>
+                <div class="pomodoro-input">
+                    <label>Break Duration</label>
+                    <input type="number" name="input-break-duration" id="input-break-duration" />
+                </div>
+            </div>
+            <div id="info">
+                <h3>Session Information: </h3>
+                <ul id="sessions"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
