@@ -3,6 +3,12 @@
     text-align: center;
 }
 
+#timer {
+    /* margin: 20px; */
+    width: 200px;
+    height: 200px;
+}
+
 .hidden {
     display: none;
 }

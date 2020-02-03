@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let updatedBreakSessionDuration;
 
     const workDurationInput = document.querySelector('#input-work-duration');
-    console.log(workDurationInput);
+    // console.log(workDurationInput);
     let breakDurationInput = document.querySelector('#input-break-duration');
 
     workDurationInput.value = '25';
@@ -201,17 +201,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const showStopIcon = () => {
-        const stopButton = document.querySelector('#stop');
+        const stopButton = document.querySelector('#reset');
         stopButton.classList.remove('hidden');
     }
 
-    const progressBar = new ProgressBar.Circle("#timer", {
+    const progressBar = new ProgressBar.Circle(timer, {
         strokeWidth: 2,
         text: {
             value: "25.00"
         },
         trailColor: "#f4f4f4",
     });
+
+   progressBar.animate(1.0);
 
     const calculateSessionProgress = () => {
         // calculate the completion rate of this session
